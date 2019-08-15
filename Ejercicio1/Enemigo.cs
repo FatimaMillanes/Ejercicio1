@@ -8,13 +8,11 @@ namespace Ejercicio1
 {
     class Enemigo
     {
-        public string PosicionX {get;set;}
-        public string PosicionY { get; set; }
-        public bool Moverse { get; set; }
-        public bool Disparar { get; set; }
-        public bool Explotar { get; set; }
-        private string _puntos;
-        public string Puntos
+        public int PosicionX {get;set;}
+        public int PosicionY { get; set; }
+        
+        private int _puntos;
+        public int Puntos
         {
             get
             {
@@ -22,16 +20,27 @@ namespace Ejercicio1
             }
             set
             {
-                if (value.Length > 100)
+                if (value >= 100)
                 {
                     _puntos = value;
                 }
                 else
                 {
-                    throw new Exception("Error");
+                    throw new Exception("El valor tiene que ser mayor a 100");
                 }
 
             }
+        }
+        public void Moverse()
+        {
+
+        }
+        public void Disparar()
+        {
+        }
+        public void Explotar()
+        {
+
         }
     }
 
